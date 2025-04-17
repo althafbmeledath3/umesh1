@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Clone</title>
+
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo"><img src="images/instalogo.png" alt="Instagram" srcset=""></div>
+    <div class="profile-menu" onclick="toggleDropdown()">
+      <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_640.png" id="profile_pic" alt="Profile" />
+      <span>▼</span>
+      <div class="dropdown" id="dropdownMenu">
+        <div id="dn-cont" style="text-align: center; padding: 10px;">
+          <a href="profile.html" style="text-decoration: none; text-align: center;">Profile</a><br>
+          <a href="login.html" style="text-decoration: none; text-align: center;">Logout</a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Section -->
+  <h2 id="username" style="padding: 15px 30px;">gdsgf</h2>
+  <br><br><br>
+  <!-- <a href="post_add.html">Add Posts</a> -->
+  <a id="bc" href="post_add.html"><div style="color: #4f5bd5;">
+    <svg aria-label="New post" class="icon" fill="currentColor" role="img" viewBox="0 0 24 24">
+      <title>New post</title>
+      <path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+      <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line>
+      <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line>
+    </svg>
+  </div>
+  </a>
+  
+   <div class="posts" id="posts">
+   
+       <!-- <div class="post-section">
+           <div class="post-header">
+               <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_640.png" alt="User" />
+               <strong>john_doe</strong>
+            </div>
+            <img class="post-image" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="Post Image" />
+            <div class="post-description">
+                Sunday vibes 🧘‍♂️☀️ #RelaxMode #InstaClone
+            </div>
+        </div> -->
+        
+    </div>
+
+  
+
+  <a href="login.html">login</a>
+
+  <a href="signup.html">signup</a>
+
+  
+
+
+  <script src="js/index.js"></script>
+
+  <script>function toggleDropdown() {
+    const dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  document.addEventListener("click", function (e) {
+    const menu = document.querySelector(".profile-menu");
+    if (!menu.contains(e.target)) {
+      document.getElementById("dropdownMenu").style.display = "none";
+    }
+  });</script>
+
+</body>
+</html>
