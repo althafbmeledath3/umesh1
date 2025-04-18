@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const postSchema = new mongoose.Schema({
   post: { type: String, required: true },
   description: { type: String, required: true },
+  
   user : {
     type : mongoose.Schema.Types.ObjectId,
     ref: "Users", //matching the User model name

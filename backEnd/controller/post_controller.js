@@ -178,11 +178,11 @@ export const loadPosts = async function loadPosts(req, res) {
         
         console.log("Inside get posts")
         
-        let userid = req.params.id
+        let user = req.params.id
         
-        console.log("userd",userid)
+        console.log("userd",user)
         
-        const userData = await postSchema.find({userid})
+        const userData = await postSchema.find({user})
 
         res.status(200).send(userData)
         
